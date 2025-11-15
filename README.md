@@ -79,21 +79,15 @@ Streamlit Web App (app.py)
    ↓
 User inputs features → Predicted Exam Score
 
+⸻
 
-
-
-
-User inputs features → Predicted Exam Score
-
-## 🖥️ Tech Stack
-
-- **Language:** Python  
-- **Web App:** Streamlit  
-- **ML Libraries:** scikit-learn, pandas, numpy  
-- **Visualization:** matplotlib / seaborn  
-- **Model Storage:** pickle (`best_model.pkl`)  
-- **Deployment:** Streamlit Cloud
-
+💻 Tech Stack
+	•	Language: Python
+	•	Web App: Streamlit
+	•	ML Libraries: scikit-learn, pandas, numpy
+	•	Visualization: matplotlib / seaborn
+	•	Model Storage: pickle (best_model.pkl)
+	•	Deployment: Streamlit Cloud
 
 🧩 Project Files
 
