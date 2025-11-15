@@ -88,3 +88,26 @@ User inputs features → Predicted Exam Score
 - **Visualization:** matplotlib / seaborn  
 - **Model Storage:** pickle (`best_model.pkl`)  
 - **Deployment:** Streamlit Cloud
+
+
+🧩 Project Files
+
+•	app.py – Streamlit app (UI + prediction logic)
+	•	best_model.pkl – Saved regression model
+	•	requirements.txt – Python dependencies
+	•	README.md – Project documentation (this file)
+
+▶️ How to Run Locally
+# 1. Clone the repository
+git clone https://github.com/Rameshreddymusku/student-performance-prediction.git
+cd student-performance-prediction
+
+# 2. Create & activate virtual environment (optional but recommended)
+python -m venv venv
+source venv/bin/activate   # On Windows: venv\Scripts\activate
+
+# 3. Install dependencies
+pip install -r requirements.txt
+
+# 4. Run the Streamlit app
+streamlit run app.py
