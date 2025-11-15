@@ -83,7 +83,8 @@ User inputs features → Predicted Exam Score
 
 ⸻
 
-💻 Tech Stack
+## 🖥️ Tech Stack
+
 	•	Language: Python
 	•	Web App: Streamlit
 	•	ML Libraries: scikit-learn, pandas, numpy
