@@ -68,7 +68,7 @@ The goal of this project is to:
 
 ##  Application Architecture
 
-```text
+
 Dataset (CSV)
    ↓
 Data Preprocessing & Model Training (Notebook / Script)
@@ -79,11 +79,11 @@ Streamlit Web App (app.py)
    ↓
 User inputs features → Predicted Exam Score
 
-'''
+
 
 ⸻
 
-## 🖥️Tech Stack
+## Tech Stack
 
 	•	Language: Python
 	•	Web App: Streamlit
