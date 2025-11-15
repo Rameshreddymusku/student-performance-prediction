@@ -1,42 +1,80 @@
-
 # 🎓 Student Performance Prediction (Regression Model)
 
-This project predicts a student’s expected **Exam Score** based on lifestyle, academic, and personal factors.  
-It uses Machine Learning (Regression) and is deployed as an interactive **Streamlit Web App**.
+This project predicts a student's **exam score** based on lifestyle, academic, and personal factors.  
+It uses **Machine Learning (Regression)** and is deployed as an interactive **Streamlit Web App**.
 
 ---
 
-## 🚀 Live Demo
-🔗 **Try the online prediction app:**  
-https://student-performance-prediction-hkaslaqtc33er7s82osvfi.streamlit.app/
+## 🔗 Live Demo
+
+👉 Try the online prediction app:  
+[Student Performance Prediction – Streamlit App](https://student-performance-prediction-hkaslaqtc33er7s82osvfi.streamlit.app/)
 
 ---
 
-## 📌 Project Overview
-Students’ academic performance depends on various psychological, lifestyle, and academic behaviors.  
-This model predicts exam scores based on:
+## 🧠 Problem Motivation
 
-- Hours Studied  
-- Attendance  
-- Sleep Hours  
-- Internet Access  
-- Parental Education Level  
-- Gender  
-- Motivation Level  
+Students’ academic performance is influenced by many factors such as study hours, attendance,
+sleep, and motivation.  
+The goal of this project is to:
 
-The goal is to help identify learning patterns and give early prediction of performance.
+- Help students understand which factors impact their performance.
+- Provide an early prediction of their expected exam score.
+- Assist teachers and parents in identifying at-risk students.
 
 ---
 
-## 🧠 Machine Learning Model
-The following regression models were trained:
+## 🧾 Dataset
 
-- Linear Regression  
-- Random Forest Regressor  
-- XGBoost Regressor  
+- **Name:** Student Performance Factors Dataset  
+- **Type:** Tabular data (CSV)  
+- **Target Variable:** `Exam_Score` (continuous value – regression)  
+- **Example Features:**
+  - Hours Studied  
+  - Attendance  
+  - Sleep Hours  
+  - Internet Access  
+  - Parental Education Level  
+  - Gender  
+  - Motivation Level  
 
-The best model was automatically selected based on **R² score**.
-
-Model file: `best_model.pkl`
+> The dataset was cleaned, preprocessed, and used to train a regression model to predict the exam score.
 
 ---
+
+## 🧮 Machine Learning Approach
+
+1. **Exploratory Data Analysis (EDA)**
+   - Checked missing values and outliers.
+   - Visualized distributions and correlations between features and exam score.
+
+2. **Data Preprocessing**
+   - Handled missing values.
+   - Encoded categorical variables (e.g., gender, parental education).
+   - Scaled numerical features where needed.
+   - Split data into **train** and **test** sets.
+
+3. **Models Tried**
+   - Linear Regression  
+   - Random Forest Regressor  
+   - XGBoost Regressor *(optional if you used it)*  
+
+4. **Model Evaluation**
+   - Metrics: **R² Score**, **Mean Absolute Error (MAE)**, **Root Mean Squared Error (RMSE)**.
+   - Selected the best model based on test performance.
+   - Saved the final model to `best_model.pkl`.
+
+---
+
+## 🏗️ Application Architecture
+
+```text
+Dataset (CSV)
+   ↓
+Data Preprocessing & Model Training (Notebook / Script)
+   ↓
+Trained Model → best_model.pkl
+   ↓
+Streamlit Web App (app.py)
+   ↓
+User inputs features → Predicted Exam Score
