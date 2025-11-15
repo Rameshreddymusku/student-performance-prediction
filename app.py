@@ -8,32 +8,49 @@ st.write("Predict a student's expected exam score based on lifestyle and academi
 
 MODEL_PATH = "best_model.pkl"
 
+# Load model
 if not os.path.exists(MODEL_PATH):
-    st.warning("Model not found. Please train it first using the notebook in the 'notebooks' folder.")
-else:
-    model = joblib.load(MODEL_PATH)
+    st.error("Model not found! Please upload best_model.pkl.")
+    st.stop()
 
-    st.subheader("Enter Student Details")
+model = joblib.load(MODEL_PATH)
 
-    hours_studied = st.slider("Hours Studied", 0.0, 10.0, 5.0, step=0.5)
-    attendance = st.slider("Attendance (%)", 0, 100, 80)
-    parental_involvement = st.selectbox("Parental Involvement", ["Low", "Medium", "High"])
-    sleep_hours = st.slider("Sleep Hours", 0.0, 12.0, 7.0, step=0.5)
-    motivation = st.slider("Motivation Level (1-10)", 1, 10, 5)
+# ---------------------------
+# INPUT FIELDS (ONLY 6 FEATURES)
+# ---------------------------
 
-    mapping = {"Low": 0, "Medium": 1, "High": 2}
+hours = st.slider("Hours Studied", 0, 10, 5)
+attendance = st.slider("Attendance (%)", 0, 100, 80)
+sleep_hours = st.slider("Sleep Hours", 0, 12, 7)
 
-    input_df = pd.DataFrame({
-        "Hours_Studied": [hours_studied],
-        "Attendance": [attendance],
-        "Parental_Involvement": [mapping[parental_involvement]],
-        "Sleep_Hours": [sleep_hours],
-        "Motivation_Level": [motivation]
-    })
+internet = st.selectbox("Internet Access", ["Yes", "No"])
+parent_edu = st.selectbox("Parental Education Level", ["High School", "College", "Postgraduate"])
+gender = st.selectbox("Gender", ["Male", "Female"])
 
-    st.write("Input Preview:")
-    st.dataframe(input_df)
+# Encoding – must match training
+encode = {
+    "Yes": 1, "No": 0,
+    "High School": 0, "College": 1, "Postgraduate": 2,
+    "Male": 1, "Female": 0
+}
 
-    if st.button("Predict Score"):
-        pred = model.predict(input_df)[0]
-        st.success(f"📊 Predicted Exam Score: {pred:.2f}")
+# Create input dataframe EXACTLY LIKE TRAINING
+input_df = pd.DataFrame({
+    "Hours_Studied": [hours],
+    "Attendance": [attendance],
+    "Sleep_Hours": [sleep_hours],
+    "Internet_Access": [encode[internet]],
+    "Parental_Education_Level": [encode[parent_edu]],
+    "Gender": [encode[gender]]
+})
+
+st.subheader("📝 Input Preview")
+st.write(input_df)
+
+# ---------------------------
+# PREDICT BUTTON
+# ---------------------------
+
+if st.button("Predict Score"):
+    pred = model.predict(input_df)[0]
+    st.success(f"🎯 Predicted Exam Score: **{pred:.2f}**")
