@@ -68,6 +68,7 @@ The goal of this project is to:
 
 ##  Application Architecture
 
+'''text
 
 Dataset (CSV)
    ↓
@@ -81,7 +82,6 @@ User inputs features → Predicted Exam Score
 
 
 
-⸻
 
 ## Tech Stack
 
