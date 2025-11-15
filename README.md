@@ -80,6 +80,9 @@ Streamlit Web App (app.py)
 User inputs features → Predicted Exam Score
 
 
+
+
+
 ## 💻 Tech Stack
 
 - **Language:** Python  
@@ -111,3 +114,6 @@ pip install -r requirements.txt
 
 # 4. Run the Streamlit app
 streamlit run app.py
+
+
+
