@@ -40,5 +40,3 @@ The best model was automatically selected based on **R² score**.
 Model file: `best_model.pkl`
 
 ---
-
-## 🗂️ Repository Structure
