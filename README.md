@@ -66,7 +66,7 @@ The goal of this project is to:
 
 ---
 
-## 🏗️ Application Architecture
+##  Application Architecture
 
 ```text
 Dataset (CSV)
@@ -83,7 +83,7 @@ User inputs features → Predicted Exam Score
 
 ⸻
 
-## 🖥️ Tech Stack
+## 🖥️Tech Stack
 
 	•	Language: Python
 	•	Web App: Streamlit
@@ -92,14 +92,14 @@ User inputs features → Predicted Exam Score
 	•	Model Storage: pickle (best_model.pkl)
 	•	Deployment: Streamlit Cloud
 
-🧩 Project Files
+## Project Files
 
 •	app.py – Streamlit app (UI + prediction logic)
 	•	best_model.pkl – Saved regression model
 	•	requirements.txt – Python dependencies
 	•	README.md – Project documentation (this file)
 
-▶️ How to Run Locally
+## How to Run Locally
 # 1. Clone the repository
 git clone https://github.com/Rameshreddymusku/student-performance-prediction.git
 cd student-performance-prediction
