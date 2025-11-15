@@ -6,7 +6,7 @@ import os
 st.title("🎓 Student Exam Score Prediction (Regression Model)")
 st.write("Predict a student's expected exam score based on lifestyle and academic factors.")
 
-MODEL_PATH = os.path.join("..", "models", "best_model.pkl")
+MODEL_PATH = "best_model.pkl"
 
 if not os.path.exists(MODEL_PATH):
     st.warning("Model not found. Please train it first using the notebook in the 'notebooks' folder.")
