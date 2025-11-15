@@ -83,6 +83,8 @@ User inputs features → Predicted Exam Score
 
 
 
+User inputs features → Predicted Exam Score
+
 ## 🖥️ Tech Stack
 
 - **Language:** Python  
