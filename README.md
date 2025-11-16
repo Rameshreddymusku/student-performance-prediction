@@ -1,4 +1,4 @@
-# 🎓 Student Performance Prediction (Regression Model)
+# 🎓 Student Performance (Regression Model)
 
 This project predicts a student's **exam score** based on lifestyle, academic, and personal factors.  
 It uses **Machine Learning (Regression)** and is deployed as an interactive **Streamlit Web App**.
